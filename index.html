@@ -2,16 +2,24 @@
 <html>
 <body>
 
-<h1>The audio autoplay attribute</h1>
-
-<p>Click on the play button to play a sound:</p>
-
-<audio id="autoplay" controls>
-  <source src="https://rawcdn.githack.com/Zenlingzi/Crush/f721952cb918785d9ca46b237fd9cab41e5470b5/sound.mp3">
+<audio id="myAudio" controls autoplay>
+  <source src="https://rawcdn.githack.com/Zenlingzi/Crush/f721952cb918785d9ca46b237fd9cab41e5470b5/sound.mp3" type="audio/mpeg">
+  <source src="https://rawcdn.githack.com/Zenlingzi/Crush/f721952cb918785d9ca46b237fd9cab41e5470b5/sound.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
+<p>Click the button to find out if the audio automatically started to play as soon as it was ready.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
 <script>
-	document.getElementById('autoplay').play();
+function myFunction() {
+  var x = document.getElementById("myAudio").autoplay;
+  document.getElementById("demo").innerHTML = x;
+}
 </script>
+
 </body>
 </html>
